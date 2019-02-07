@@ -15,7 +15,7 @@
     "airfield": "./server.js"
   },
   "name": "airfield",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "server.js",
   "author": "ajb <austin@austinbillings.com>",
   "license": "ISC",
