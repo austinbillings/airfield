@@ -1,13 +1,25 @@
-# Airfield!
+# airfield
 
-Successfully proxy Cobalt token redirects locally, for Macs.
+Redirection proxy for directing remote hosts to local services. Compatible with unix-like systems (macOS, Linux, etc.).
+
+## Installation
+```sh
+npm install -g airfield
+```
 
 ## Setup
-1. Install dependencies with `npm install` or `yarn`.
-2. In the Airfield directory, run `npm link`. This will tie the `airfield` terminal command to the script.
-3. Run `sudo airfield`.
+In any project folder, setup an airfield config file as `airfield.config.js`. Here's a sample:
 
-To change the proxied hostname, local destination, or some other details, edit `serverConfig.js` in the `airfield` directly.
+```
+module.exports = {
+    origin: 'some-remote-site.com', // capture traffic intended for this domain
+    destination: 'localhost:1234', // and push it to this domain instead
+    useSSL: false,
+    onStartup: () => {
+        console.log('it works! :)');
+    }
+};
+```
 
 ## Troubleshooting
 |Issue|Possible Fix|
@@ -15,8 +27,8 @@ To change the proxied hostname, local destination, or some other details, edit `
 |I get a message that says "your hosts file ain't setup right" or something|Follow the instructions given to properly configure your hosts file to handle your desired given hostname. Be sure to restart your computer afterward.|
 |I get an error that says "EACCESS", then some cryptic node garbage.|Run the app as root/super user to host on ports below 1024 (including 80 and 443 as needed here).|
 |I get an error that says "EADDRINUSE", then some cryptic node garbage.|Make sure there's no other apps running on your port 80 or 443 (the default web ports for http and https, respectively). Google this if you aren't sure how to check.|
-|The redirect doesn't complete; I land on a page that looks like "labss.secure.t-mobilemoney.com" but it says the SSL certificate is invalid.|Add an exception in your browser for the invalid certificate. This is necessary since we need to catch local traffic hitting `https://...`.|
-|Something else is wrong|Well, slack austin or something.|
+|The redirect doesn't complete; I land on a webpage but it says the SSL certificate is invalid.|Add an exception in your browser for the invalid certificate. This is necessary since we need to catch local SSL traffic (at `https://...`).|
+|Something else is wrong|Well, [email austin](austin@austinbillings.com) or something.|
 
 
 ## How it works
