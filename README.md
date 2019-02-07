@@ -62,3 +62,7 @@ d88P     888 8888888 888   T88b 888        8888888 8888888888 88888888 8888888P"
 
 ## How it works
 Once your `/etc/hosts` file is configured properly to treat requests to "example.com" (or whatever) to your local machine (127.0.0.1), `airfield` runs a server at port 80/443, which intercepts the redirected page URL. The token part of the querystring along with the full post-hostname path is passed along to the specified destination host.
+
+## Todo/Roadmap
+- Remove use-case specific rewriting of `ssoToken` cookie to query string, while adding ability to easily capture cookies and apply to URLs or preserve as cookies.
+- Automatically update `/etc/hosts` without giving instructions 
