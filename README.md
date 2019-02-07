@@ -53,10 +53,10 @@ d88P     888 8888888 888   T88b 888        8888888 8888888888 88888888 8888888P"
 ## Troubleshooting
 |Issue|Possible Fix|
 |:--|:--|
-|I get a message that says "your hosts file ain't setup right" or something|Follow the instructions given to properly configure your hosts file to handle your desired given hostname. Be sure to restart your computer afterward.|
+|I get a message that says "your hosts file ain't setup right" or something|Follow the instructions given to properly configure your hosts file to handle your desired given hostname. If you've updated the `hosts` file and `airfield` still doesn't work, **be sure to restart your computer afterward.** |
 |I get an error that says "EACCESS", then some cryptic node garbage.|Run the app as root/super user to host on ports below 1024 (including 80 and 443 as needed here).|
 |I get an error that says "EADDRINUSE", then some cryptic node garbage.|Make sure there's no other apps running on your port 80 or 443 (the default web ports for http and https, respectively). Google this if you aren't sure how to check.|
-|The redirect doesn't complete; I land on a webpage but it says the SSL certificate is invalid.|Add an exception in your browser for the invalid certificate. This is necessary since we need to catch local SSL traffic (at `https://...`).|
+|The redirect doesn't complete; I land on a webpage but it says the SSL certificate is invalid.|Add an exception in your browser for the invalid certificate. The cert used by `airfield` is self-signed, and lives inside `/airfield/ssl`. Trusting the local cert is necessary since we need to catch local SSL traffic (at `https://...`).|
 |Something else is wrong|Well, [email austin](austin@austinbillings.com) or something.|
 
 
