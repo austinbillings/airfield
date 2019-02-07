@@ -47,7 +47,7 @@ d88P     888 8888888 888   T88b 888        8888888 8888888888 88888888 8888888P"
  → INFO:    Starting redirect server. . .
  ✓ OK:      Redirection http server listening on :80
  ✓ OK:      Redirection https server listening on :443
- ✓ OK:      It works :)
+ ✓ OK:      it works! :)
 ```
 
 ## Troubleshooting
