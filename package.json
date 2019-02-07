@@ -15,7 +15,7 @@
     "airfield": "./server.js"
   },
   "name": "airfield",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "server.js",
   "author": "ajb <austin@austinbillings.com>",
   "repository": "https://github.com/austinbillings/airfield",
