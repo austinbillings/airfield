@@ -2,7 +2,6 @@
 const fs = require('fs');
 const zaq = require('zaq');
 const url = require('url');
-const open = require('opn');
 const http = require('http');
 const path = require('path');
 const https = require('https');
