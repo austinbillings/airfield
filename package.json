@@ -18,6 +18,7 @@
   "version": "0.3.1",
   "main": "server.js",
   "author": "ajb <austin@austinbillings.com>",
+  "repository": "https://github.com/austinbillings/airfield",
   "license": "ISC",
-  "description": ""
+  "description": "Redirection proxy for directing remote hosts to local services. Compatible with unix-like systems (macOS, Linux, etc.)."
 }
